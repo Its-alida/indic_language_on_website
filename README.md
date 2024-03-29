@@ -10,7 +10,6 @@ This project aims to provide Indic language support for websites by enabling dyn
 
 **Constraints:**
 - Translation accuracy is low
-- cannot work on nested html tags like ``` <nav><ul><li></li></ul></nav>```
 
 **Requirements:**
 - Python 3.x

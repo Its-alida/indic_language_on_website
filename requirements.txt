@@ -1,0 +1,3 @@
+Flask==2.0.2
+transformers==4.39.2
+beautifulsoup4==4.12.3

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Translation Demo</title>
+    <style>
+        body{
+                background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div id="content">
+        <!-- Your website content here -->
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+
+        <h1>Make purchase</h1>
+        <p>beautiful</p>
+        <p>How are you?</p>
+    </div>
+
+    <button onclick="translateToHindi()">Translate</button>
+
+    <script>
+        function translateToHindi() {
+            const htmlContent = document.getElementById('content').innerHTML.trim();
+
+            // Send HTML content to backend for translation
+            fetch('/translate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ htmlContent: htmlContent })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Update HTML content with translated text
+                document.getElementById('content').innerHTML = data.translatedHTML;
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>

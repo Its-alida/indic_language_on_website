@@ -1,34 +1,133 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Translation Demo</title>
     <style>
-        body{
-                background-color: aqua;
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: rgb(255, 255, 255);
+            margin: 0;
+            padding: 0;
+        }
+
+        #content {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        li {
+            display: inline;
+            margin-right: 10px;
+            background-color: rgb(159, 238, 252);
+            padding: 10px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        .product {
+            display: inline-block;
+            width: 30%;
+            margin-right: 20px;
+            vertical-align: top;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        nav {
+            background-color: rgb(159, 238, 252);
+            overflow: hidden;
+        }
+
+        nav ul {
+            list-style-type: circle;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            float: left;
+        }
+
+        nav li a {
+            display: block;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 10px 10px;
+            text-decoration: none;
+        }
+
+        nav li a:hover {
+            background-color: #111;
+            color: aliceblue;
         }
     </style>
 </head>
 
 <body>
-    
-    <div id="content">
-        <!-- Your website content here -->
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
 
-        <h1>Make purchase</h1>
-        <p>beautiful</p>
-        <p>How are you?</p>
+    <div id="content">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li style="display: block;
+                color: rgb(0, 0, 0);
+                text-align: center;
+                padding: 22px 16px;
+                text-decoration: none;"><button onclick="translateToHindi()">Change Language </button></li>
+        </nav>
+        </ul>
+        </nav>
+
+
+
+        <h1>Welcome to our online store!</h1>
+        <p>Explore our wide range of products and make your purchase today.</p>
+
+        <h3>Our Featured Items : </h2>
+
+            <div class="product">
+                <img src="https://www.freeiconspng.com/thumbs/shoes-png/green-running-shoes-png-24.png" alt="Product 1">
+                <h3>Green sport shoes by Luma</h3>
+                <p>Lightweight shoes with grip </p>
+                <p>Price: Rupees 1499.99</p>
+            </div>
+            <div class="product">
+                <img src="https://i.pinimg.com/originals/d8/3f/c3/d83fc3220ec4b623536d5166608334ae.jpg" alt="Product 2">
+                <h3>Red sport shoes by Mike </h3>
+                <p>Amazing lightweight shoes </p>
+                <p>Price: Rupees 1299.99</p>
+            </div>
+            <div class="product">
+                <img src="https://i.pinimg.com/474x/47/b4/0d/47b40d607bd173069468a6f10b53e073.jpg" alt="Product 2">
+                <h3>Colorful shoes for kids </h3>
+                <p>Fun shoes
+                    <!DOCTYPE html>
+                </p>
+                <p>Price: Rupees 300.99</p>
+            </div>
     </div>
 
-    <button onclick="translateToHindi()">Translate</button>
+
 
     <script>
         function translateToHindi() {
             const htmlContent = document.getElementById('content').innerHTML.trim();
 
-            // Send HTML content to backend for translation
             fetch('/translate', {
                 method: 'POST',
                 headers: {
@@ -36,13 +135,13 @@
                 },
                 body: JSON.stringify({ htmlContent: htmlContent })
             })
-            .then(response => response.json())
-            .then(data => {
-                // Update HTML content with translated text
-                document.getElementById('content').innerHTML = data.translatedHTML;
-            })
-            .catch(error => console.error('Error:', error));
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('content').innerHTML = data.translatedHTML;
+                })
+                .catch(error => console.error('Error:', error));
         }
     </script>
 </body>
+
 </html>

@@ -73,12 +73,59 @@
             background-color: #111;
             color: aliceblue;
         }
+        .navbar {
+            background-color: #232f3e;
+            overflow: hidden;
+        }
+        .navbar-brand {
+            padding: 14px 20px;
+            
+        }
+        .search-container {
+            float: right;
+            padding: 10px;
+        }
+        .search-container input[type=text] {
+            padding: 10px;
+            margin-top: 8px;
+            font-size: 17px;
+            border: none;
+            border-radius: 5px;
+        }
+        .search-container button {
+            float: right;
+            padding: 10px 15px;
+            margin-top: 8px;
+            margin-right: 16px;
+            background: #ddd;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .search-container button:hover {
+            background: #ccc;
+        }
+
+        .logo{
+            width: 80px;
+            height: 65px;
+        }
     </style>
 </head>
 
 <body>
 
     <div id="content">
+        <div class="navbar">
+            <img class="logo" src="https://cdn.dribbble.com/users/41719/screenshots/9393332/media/775f5fe59bb28590df6532ce3f598989.jpg?resize=400x300&vertical=center">
+            <div class="search-container">
+                <form action="/search" method="GET">
+                    <input type="text" placeholder="Search..." name="search">
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+        </div>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -87,13 +134,11 @@
                 <li style="display: block;
                 color: rgb(0, 0, 0);
                 text-align: center;
-                padding: 22px 16px;
+                padding: 16px 16px;
                 text-decoration: none;"><button onclick="translateToHindi()">Change Language </button></li>
         </nav>
         </ul>
         </nav>
-
-
 
         <h1>Welcome to our online store!</h1>
         <p>Explore our wide range of products and make your purchase today.</p>

@@ -10,7 +10,8 @@ This project aims to provide Indic language support for websites by enabling dyn
 - User-friendly interface for triggering translation.
 
 **Constraints:**
-- Translation accuracy is low
+- Translation accuracy
+- Response time 
 
 **Requirements:**
 - Python 3.x

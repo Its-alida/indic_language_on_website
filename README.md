@@ -1,7 +1,6 @@
 **Indic Language Support for Websites**
 
 ***src="https://www.youtube.com/embed/flITEsE9R2g?si=Fiw6b6yH9QyoyXR_"***
-[![IMAGE ALT TEXT HERE]([https://drive.google.com/drive/folders/18s57tUV3tIRFW8ToR8rjqyEfMiqkINg1])(https://www.youtube.com/watch?v=flITEsE9R2g)
 
 
 **Introduction:**

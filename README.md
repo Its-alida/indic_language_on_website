@@ -1,6 +1,8 @@
 **Indic Language Support for Websites**
 
 ***src="https://www.youtube.com/embed/flITEsE9R2g?si=Fiw6b6yH9QyoyXR_"***
+[![IMAGE ALT TEXT HERE]([https://drive.google.com/drive/folders/18s57tUV3tIRFW8ToR8rjqyEfMiqkINg1])(https://www.youtube.com/watch?v=flITEsE9R2g)
+
 
 **Introduction:**
 This project aims to provide Indic language support for websites by enabling dynamic translation of content from English to Indic languages, initially focusing on Hindi.

@@ -45,6 +45,9 @@ Or install the modules independently using ```pip install <module_name>```
 python app.py
 ```
 
+To be able to dynamically translate , you need to access your webpage not by running ```index.html``` directly but only through flask server . First start flask server by ```python app.py```
+and once you go to the link it shows , you can access the site.
+
 4. Access the application in your web browser at `http://localhost:5000`.
 
 **Usage:**

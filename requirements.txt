@@ -1,4 +1,6 @@
-Flask
-transformers
-beautifulsoup4
-sentencepiece
+Flask==3.0.2 
+transformers==4.39.2  
+beautifulsoup4==4.12.3  
+sentencepiece==0.2.0
+torch==2.2.2
+

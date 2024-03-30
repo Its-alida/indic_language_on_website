@@ -8,6 +8,9 @@ This project aims to provide Indic language support for websites by enabling dyn
 - Seamless integration into existing web pages.
 - User-friendly interface for triggering translation.
 
+**Constraints:**
+- Translation accuracy is low
+
 **Requirements:**
 - Python 3.x
 - Flask
